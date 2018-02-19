@@ -1,0 +1,24 @@
+<form #f="ngForm"  class="form-signin">
+    <div class="text-center mb-4">
+      <img class="mb-4"  src="{{imageUrl}}"  alt="" width="122" height="122">
+      <h1 class="h3 mb-3 font-weight-normal">Quero Ser um Biker</h1>
+      <p>Crie sua Wallet com metamask, conecte-se na rede ROPSTEN consiga alguns ETH e em seguida registre-se para se tornar um Biker</p>
+    </div>
+
+    <div class="form-group text-center">
+        <h5>VAMm ?!</h5>
+    </div>
+
+    <div class="form-label-group">
+      <input ngModel #name="ngModel" name="name" id="name" class="form-control" placeholder="Nome do Biker" required autofocus="" type="text">
+      <label for="name">Seu nome Biker</label>
+    </div>
+
+    <button [disabled]="!f.valid"  (click)="becomeBiker(name)" class="btn btn-lg btn-primary btn-block" type="submit">Go Biker!</button>
+    <div style="padding: 10px 0" class="text-right">
+      <label>
+        <a routerLink="" >Buscar biker</a>
+      </label>
+    </div>
+    <p class="mt-5 mb-3 text-muted text-center">© 2018</p>
+  </form>
